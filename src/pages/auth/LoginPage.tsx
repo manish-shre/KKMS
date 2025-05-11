@@ -9,14 +9,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/Ca
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm<{ email: string; password: string }>();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const { signIn } = useAuth();
   const navigate = useNavigate();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: { email: string; password: string }) => {
     setIsLoading(true);
     setError('');
     try {
@@ -33,7 +33,7 @@ const LoginPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 via-white to-blue-200">
       <Card className="w-full max-w-md shadow-xl rounded-2xl">
         <CardHeader className="flex flex-col items-center">
-          <img src="/src/Images/logo.png" alt="Logo" className="h-16 mb-2" />
+          <img src="/logo.png" alt="Logo" className="h-16 mb-2" />
           <CardTitle className="text-2xl font-bold text-blue-800">Admin Login</CardTitle>
           <p className="text-gray-500 text-sm mt-1">Sign in to your admin account</p>
         </CardHeader>
@@ -44,7 +44,7 @@ const LoginPage = () => {
                 {error}
               </div>
             )}
-            <FormField label="Email" htmlFor="email" error={errors.email?.message} required>
+            <FormField label="Email" htmlFor="email" error={typeof errors.email?.message === 'string' ? errors.email.message : undefined} required>
               <div className="relative">
                 <Mail className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
                 <Input
@@ -56,7 +56,7 @@ const LoginPage = () => {
                 />
               </div>
             </FormField>
-            <FormField label="Password" htmlFor="password" error={errors.password?.message} required>
+            <FormField label="Password" htmlFor="password" error={typeof errors.password?.message === 'string' ? errors.password.message : undefined} required>
               <div className="relative">
                 <Lock className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
                 <Input

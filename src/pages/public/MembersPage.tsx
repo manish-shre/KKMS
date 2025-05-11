@@ -27,7 +27,7 @@ const MembersPage = () => {
       <section
         className="relative flex min-h-[400px] items-center justify-center bg-blue-900 bg-cover bg-center text-white"
         style={{ 
-          backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.3), rgba(30, 64, 175, 0.3)), url('/src/Images/hero.png')` 
+          backgroundImage: `linear-gradient(rgba(30, 64, 175, 0.3), rgba(30, 64, 175, 0.3)), url('/hero.png')` 
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">

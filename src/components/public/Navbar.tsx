@@ -37,7 +37,7 @@ const PublicNavbar = () => {
         <div className="flex items-center space-x-2">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src="/src/Images/logo.png" alt="KKMS Logo" className="h-14 w-auto" />
+            <img src="/logo.png" alt="KKMS Logo" className="h-14 w-auto" />
           </Link>
         </div>
 

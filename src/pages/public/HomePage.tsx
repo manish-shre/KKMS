@@ -10,7 +10,7 @@ import type { Event } from '../../types';
 import type { Member } from '../../types';
 
 // Hero section background
-const heroBg = "/src/Images/logo.png";
+const heroBg = "/logo.png";
 
 const HomePage = () => {
   const { events, loading: eventsLoading } = useEvents();
@@ -108,7 +108,7 @@ const HomePage = () => {
               <div
                 className="relative w-full h-full rounded-2xl flex flex-col justify-center items-center p-10 text-center"
                 style={{
-                  backgroundImage: "url('/src/Images/hero.png')", // Change to your image path
+                  backgroundImage: "url('/hero.png')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
