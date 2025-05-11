@@ -65,55 +65,56 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <h2
-            className="text-2xl md:text-4xl lg:text-[40px] font-bold text-[#106AAA] text-center mb-10 font-aloevera"
+            className="text-2xl md:text-4xl lg:text-[40px] font-bold text-[#106AAA] text-center mb-6 md:mb-10 font-aloevera"
           >
             About Us
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-6 md:gap-12">
             {/* Left: Vision, Mission, History */}
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-4 md:space-y-6">
               {/* Vision */}
-              <div className="rounded-2xl bg-red-50 p-6 shadow-sm">
-                <span className="inline-block rounded-full bg-white px-4 py-2 text-lg font-semibold text-red-700 mb-4 shadow">
+              <div className="rounded-2xl bg-red-50 p-4 md:p-6 shadow-sm">
+                <span className="inline-block rounded-full bg-white px-3 py-1.5 md:px-4 md:py-2 text-base md:text-lg font-semibold text-red-700 mb-3 md:mb-4 shadow">
                   Our Vision
                 </span>
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-sm md:text-base">
                   Fusce sed pellentesque dui. Nunc lacinia, nibh vitae gravida condimentum, turpis neque commodo mauris, id rutrum lacus nisl a risus.
                 </p>
               </div>
               {/* Mission */}
-              <div className="rounded-2xl bg-green-50 p-6 shadow-sm">
-                <span className="inline-block rounded-full bg-white px-4 py-2 text-lg font-semibold text-red-700 mb-4 shadow">
+              <div className="rounded-2xl bg-green-50 p-4 md:p-6 shadow-sm">
+                <span className="inline-block rounded-full bg-white px-3 py-1.5 md:px-4 md:py-2 text-base md:text-lg font-semibold text-red-700 mb-3 md:mb-4 shadow">
                   Our Mission
                 </span>
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-sm md:text-base">
                   Fusce sed pellentesque dui. Nunc lacinia, nibh vitae gravida condimentum, turpis neque commodo mauris, id rutrum lacus nisl a risus.
                 </p>
               </div>
               {/* History */}
-              <div className="rounded-2xl bg-blue-50 p-6 shadow-sm">
-                <span className="inline-block rounded-full bg-white px-4 py-2 text-lg font-semibold text-red-700 mb-4 shadow">
+              <div className="rounded-2xl bg-blue-50 p-4 md:p-6 shadow-sm">
+                <span className="inline-block rounded-full bg-white px-3 py-1.5 md:px-4 md:py-2 text-base md:text-lg font-semibold text-red-700 mb-3 md:mb-4 shadow">
                   Our History
                 </span>
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-sm md:text-base">
                   Fusce sed pellentesque dui. Nunc lacinia, nibh vitae gravida condimentum, turpis neque commodo mauris, id rutrum lacus nisl a risus.
                 </p>
               </div>
             </div>
             {/* Right: Large Card */}
-            <div className="flex items-center">
+            <div className="flex items-center mt-6 md:mt-0">
               <div
-                className="relative w-full h-full rounded-2xl flex flex-col justify-center items-center p-10 text-center"
+                className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden"
                 style={{
                   backgroundImage: "url('/hero.png')",
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
               >
-                {/* No overlay, no text */}
+                {/* Optional overlay for better text contrast if needed */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
           </div>
